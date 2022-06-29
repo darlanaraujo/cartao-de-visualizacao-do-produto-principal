@@ -1,0 +1,163 @@
+* {
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+  box-sizing: border-box;
+  font-family: 'Open Sans', sans-serif;
+}
+
+.page {
+  width: 100vw;
+  height: 100vh;
+  background-color: #f2e9e3;
+  position: relative;
+}
+
+.container-card {
+  display: flex;
+  width: 600px;
+  height: 450px;
+  background-color: #fff;
+  border-radius: 10px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: auto;
+  box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.1);
+  transition: .5s all;
+}
+
+@media (max-width: 600px) {
+  .container-card {
+    display: block;
+    width: 342px;
+    height: 611px;
+    transition: .5s all;
+  }
+}
+
+.card-left,
+.card-right {
+  width: 50%;
+}
+
+@media (max-width: 600px) {
+  .card-left,
+  .card-right {
+    width: 100%;
+    transition: .5s all;
+  }
+}
+
+.img-produto {
+  width: 100%;
+  height: 100%;
+  background-image: url("../img/image-product-desktop.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  border-radius: 10px 0px 0px 10px;
+}
+
+@media (max-width: 600px) {
+  .img-produto {
+    height: 238px;
+    background-image: url("../img/image-product-mobile.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-radius: 10px 10px 0px 0px;
+    transition: .5s all;
+  }
+}
+
+.card-right {
+  padding: 30px;
+}
+
+.card-right .titulo-categoria {
+  text-transform: uppercase;
+  font-size: 14px;
+  letter-spacing: 4px;
+  color: #6e7177;
+  margin-bottom: 20px;
+}
+
+.card-right .titulo-principal {
+  font-size: 30px;
+  line-height: 1;
+  margin-bottom: 20px;
+  font-family: 'Fraunces', serif;
+}
+
+.card-right .texto {
+  color: #6e7177;
+  line-height: 1.5;
+  margin-bottom: 20px;
+  font-size: 16px;
+}
+
+@media (max-width: 600px) {
+  .card-right .texto {
+    font-size: 14px;
+    margin-bottom: 30px;
+    transition: .5s all;
+  }
+}
+
+.card-right .preco-atual {
+  display: flex;
+  color: #36826a;
+  font-size: 36px;
+  margin-bottom: 20px;
+  font-family: 'Fraunces', serif;
+  font-weight: 500;
+}
+
+.card-right .preco-atual .preco {
+  color: #6e7177;
+  font-size: 14px;
+  align-self: center;
+  margin-left: 20px;
+  position: relative;
+}
+
+.card-right .preco-atual .preco::before {
+  content: '';
+  position: absolute;
+  width: 50px;
+  height: 1px;
+  border-bottom: solid 1px #6e7177;
+  top: 10px;
+}
+
+.card-right .btn-carrinho {
+  display: block;
+  text-align: center;
+  background-color: #36826a;
+  width: 100%;
+  padding: 10px;
+  border-radius: 8px;
+  color: #fff;
+  font-size: 15px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.card-right .btn-carrinho i {
+  margin-right: 15px;
+}
+
+.attribution {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 10px;
+  margin: auto;
+  font-size: 11px;
+  text-align: center;
+}
+
+.attribution a {
+  color: #3e52a3;
+}
